@@ -44,8 +44,28 @@
                </li>
            </ul>
         </div>
-        <div class="content" ng-view>
+        <!--<div class="content" ng-view>-->
 
+        <!--</div>-->
+        <div class="content">
+            <div ng-controller="CustomersController">
+                <h1>Customer Controller:</h1>
+
+                <div class="search">
+                    <strong>Search:</strong>
+                    <input type="text" ng-model="firstName" />
+                </div>
+
+                <ul>
+                    <li ng-repeat="customer in customers | orderBy: 'firstName' ">
+                        <div>
+                            <span>Full Name: {{ customer.firstName | lowercase }} {{ customer.lastName | lowercase }} </span>
+                            <span>Company: {{ customer.company | lowercase }} </span>
+                            <span>Web Site: {{ customer.webSite | appercase }} </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
   </div>
@@ -68,6 +88,7 @@
 
     <! --  Register CmApp Scripts  -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/services/customerService.js"></script>
     <! -- End Register -->
 
 

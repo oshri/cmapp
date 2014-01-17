@@ -32,7 +32,9 @@ cmApp.controller('DashboardController', function($scope){
 
 });
 
-cmApp.controller('CustomersController', function($scope){
+cmApp.controller('CustomersController', function($scope, customerService){
+
+    $scope.customers = customerService.getCustomers();
 
 });
 

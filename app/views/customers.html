@@ -1,3 +1,18 @@
 <div>
-    Customer Controller
+    <h1>Customer Controller:</h1>
+
+    <div class="search">
+      <strong>Search:</strong>
+      <input type="text" ng-model="firstName" />
+    </div>
+
+    <ul>
+        <li ng-repeat="custumer in customers | orderBy: 'firstName' ">
+            <div>
+                <span>Full Name: {{ firstName | lowercase}} </span>
+                <span>Company: {{ company | lowercase }} </span>
+                <span>Web Site: {{ webSite | appercase }} </span>
+            </div>
+        </li>
+    </ul>
 </div>
