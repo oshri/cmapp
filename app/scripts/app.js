@@ -1,6 +1,3 @@
 'use strict';
 
-angular.module('cmappApp', [
-  'ngCookies',
-  'ngSanitize'
-]);
+angular.module('cmApp', ['ngCookies','ngSanitize']);
